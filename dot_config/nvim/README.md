@@ -54,13 +54,14 @@ lazy.nvim が自動で入り、プラグインを揃えたあと再起動すれ�
 ```
 ~/.config/nvim/
 ├── init.lua                   読み込み順を決めるだけ
+├── cheatsheet.md              <leader>? で開くチートシート（Vim 標準操作・プラグイン・覚えたいこと）
 ├── lazy-lock.json             自動生成（git にコミットする）
 └── lua/
     ├── bookmarks.lua          登録ディレクトリへジャンプ（M.dirs に追記して拡張）
     ├── config/
     │   ├── lazy.lua           lazy.nvim のブートストラップ
     │   ├── options.lua        インデント4、undofile、診断表示など
-    │   ├── keymaps.lua        全体で効くキーマップ（<leader>fp）
+    │   ├── keymaps.lua        全体で効くキーマップ（<leader>fp、<leader>?）
     │   └── autocmds.lua       LSP のキーマップとハイライト(treesitter)の起動
     └── plugins/               ここは lazy が自動で読む
         ├── dotnet.lua         easy-dotnet（Roslyn LSP を含む）
@@ -141,8 +142,8 @@ Leader は `<Space>`。
 
 `default` preset のキーバインド。スニペットは LuaSnip + friendly-snippets。
 
-| `<C-space>` メニュー表示/ドキュメント | `<Tab>` / `<S-Tab>` 選択・スニペットのプレースホルダー移動 | `<CR>` 確定 | `<C-e>` 閉じる |
-|---|---|---|---|
+| `<C-space>` メニュー表示/ドキュメント | `<C-n>` / `<C-p>` 選択 | `<C-y>` 確定（`<CR>` は改行） | `<Tab>` / `<S-Tab>` スニペットのプレースホルダー移動 | `<C-e>` 閉じる |
+|---|---|---|---|---|
 
 **起動画面（alpha.nvim）**
 
@@ -156,10 +157,15 @@ Leader は `<Space>`。
 | `<leader>fp` | `lua/bookmarks.lua` の `M.dirs` に登録した場所から選んで `:cd`＋`find_files`。場所を増やしたいときは `M.dirs` に1行足すだけ |
 |---|---|
 
+**チートシート**
+
+| `<leader>?` | `cheatsheet.md` をフロートで開閉（`q` でも閉じる）。その場で編集して `:w` で保存でき、見出しの上で `za` で畳める。後半の「プラグイン」に自分で設定したキーも載せているので、キーを変えたらその節も直す |
+|---|---|
+
 **その他**
 
-`lua/config/keymaps.lua` には `<leader>fp`（ディレクトリブックマーク）と
-`<leader>e`（診断のフロート表示）のみ定義。
+`lua/config/keymaps.lua` には `<leader>fp`（ディレクトリブックマーク）、
+`<leader>e`（診断のフロート表示）、`<leader>?`（チートシート）のみ定義。
 それ以外は Neovim 標準のキー（`:w`、`<C-w>` 系）をそのまま使う。
 `<leader>` を押すと which-key がグループ・キーの一覧をポップアップ表示する。
 
