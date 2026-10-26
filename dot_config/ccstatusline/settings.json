@@ -1,0 +1,112 @@
+{
+  "version": 4,
+  "lines": [
+    [
+      {
+        "id": "1",
+        "type": "model",
+        "metadata": {
+          "label": "󰚩 "
+        }
+      },
+      {
+        "id": "2",
+        "type": "context-percentage",
+        "merge": "no-padding",
+        "metadata": {
+          "display": "slider",
+          "label": "󰍛 "
+        }
+      },
+      {
+        "id": "3",
+        "type": "context-length",
+        "metadata": {
+          "label": " · "
+        }
+      },
+      {
+        "id": "4",
+        "type": "git-branch",
+        "metadata": {
+          "hide": "no-git"
+        }
+      },
+      {
+        "id": "5",
+        "type": "git-changes",
+        "metadata": {
+          "hide": "no-git"
+        }
+      }
+    ],
+    [
+      {
+        "id": "10",
+        "type": "session-usage",
+        "metadata": {
+          "display": "slider",
+          "label": "5h "
+        }
+      },
+      {
+        "id": "11",
+        "type": "reset-timer",
+        "metadata": {
+          "label": "󰔟 ",
+          "compact": "true"
+        }
+      },
+      {
+        "id": "12",
+        "type": "weekly-usage",
+        "metadata": {
+          "display": "slider",
+          "label": "7d "
+        }
+      },
+      {
+        "id": "13",
+        "type": "weekly-reset-timer",
+        "metadata": {
+          "label": "󰃰 ",
+          "compact": "true"
+        }
+      }
+    ],
+    []
+  ],
+  "flexMode": "full",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPaddingSide": "both",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "terminalWidthCacheTtlSeconds": 5,
+  "customCommandCacheTtlSeconds": 0,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": true,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [
+      ""
+    ],
+    "endCaps": [
+      ""
+    ],
+    "theme": "tokyonight",
+    "autoAlign": false,
+    "continueThemeAcrossLines": true
+  },
+  "installation": {
+    "method": "pinned",
+    "installedVersion": "2.2.32"
+  },
+  "defaultPadding": " "
+}
